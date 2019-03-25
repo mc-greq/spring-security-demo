@@ -10,13 +10,19 @@
 <html>
 <head>
     <title>Custom Login Page</title>
+
+    <style>
+        .failed{
+            color:red;
+        }
+    </style>
 </head>
 <body>
 <h3>My Custom Login Page</h3>
     <form:form action="${pageContext.request.contextPath}/authenticateTheUser"
         method="post">
         <c:if test="${param.error != null}">
-            <i>Sorry! Invalid credentials!</i>
+            <i class="failed">Sorry! Invalid credentials!</i>
         </c:if>
 
         <p>
